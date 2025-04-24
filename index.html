@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Predictions</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #121212, #1e1e1e);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      border-bottom: 2px solid red;
+    }
+
+    .menu-btn {
+      width: 30px;
+      cursor: pointer;
+    }
+
+    .menu-btn div {
+      width: 25px;
+      height: 3px;
+      background: black;
+      margin: 5px 0;
+    }
+
+    .telegram-icon {
+      margin-left: auto;
+      width: 70px;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      padding: 10px 25px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #fff;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: #444;
+    }
+
+    .overlay {
+      position: fixed;
+      display: none;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 99;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+    <a href="#">JOIN VIP</a>
+    <a href="#">VIP Past Results</a>
+  </div>
+  <div id="overlay" class="overlay" onclick="closeNav()"></div>
+
+  <!-- Top bar -->
+  <div class="navbar">
+    <div class="menu-btn" onclick="openNav()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <img src="telegram_icon.png" alt="Telegram" class="telegram-icon" />
+  </div>
+
+  <div class="container">
+    <div class="card">
+    <h2>Today's Predictions</h2>
+    </div>
+    <div class="card">
+      
+      <p><strong>Match:</strong> St. Gallen vs Sion</p>
+      <p><strong>Kickoff:</strong> 2:30 PM UTC</p>
+      <p><strong>Prediction:</strong> Home or Draw</p>
+    </div>
+    <div class="card">
+      <p><strong>Match:</strong> AFC Bournemouth U21 vs Ipswich Town U21</p>
+      <p><strong>Kickoff:</strong> 3:00 PM UTC</p>
+      <p><strong>Prediction:</strong> Over 2.5 Goals</p>
+    </div>
+    <div class="card">
+      <p><strong>Match:</strong> Molde vs Bodo/Glimt</p>
+      <p><strong>Kickoff:</strong> 5:15 PM UTC</p>
+      <p><strong>Prediction:</strong> Draw or Away</p>
+    </div>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("overlay").style.display = "block";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("overlay").style.display = "none";
+    }
+  </script>
+</body>
+</html>
